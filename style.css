@@ -1,0 +1,25 @@
+.postBox {
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    background-color: aqua;
+    height: 100px;
+    width: 100%;
+}
+
+.input {
+    padding: 13px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(26, 25, 25, 0.2);
+    border:transparent;
+    color: #000000 !important;
+    font-size: 15px;
+    width: 300px;
+    color: black;
+    font-weight: bolder;
+
+}
