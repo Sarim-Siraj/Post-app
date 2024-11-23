@@ -7,6 +7,9 @@
     background-color: aqua;
     height: 100px;
     width: 100%;
+    h5{
+        font-size: 90px;
+    }
 }
 
 .input {
@@ -22,4 +25,12 @@
     color: black;
     font-weight: bolder;
 
+}
+.imagebg{
+    height: 40px;
+    width: 50px;
+
+}
+.selectimg{
+    border: 3px solid black;
 }

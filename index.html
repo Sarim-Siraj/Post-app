@@ -14,7 +14,8 @@
 
 <body>
     <div class="container">
-        <div class="head">
+        <div class="head text-center">
+            <h5 >POST APP</h5>
             
         </div>
         <div class="mt-5 postBox">
@@ -32,16 +33,19 @@
                         <label class="mx-2">Description</label>
                         <textarea class=" mt-2 input" rows="3" id="Description"></textarea>
                     </div>
+                    <label class="mx-2">background</label>
                     <div class="d-flex justify-content-between">
-                        <input class="apna" onchange="changebg(this.value)" id="pickcolor" type="color">
-                        <img src="./emoji 1.avif" alt="">
-                        <img src="./image2.jpeg" alt="">
-                        <img src="./party.jpg" alt="">
+                       
+                        <input class="apna" onclick="selectimg()" onchange="changebg(this.value)" id="pickcolor" type="color">
+                        
+                        <img class="imagebg" onclick="selectimg('emoji 1.avif')" src="emoji 1.avif" alt="">
+                        <img  class="imagebg" onclick="selectimg('image2.jpeg')" src="image2.jpeg" alt="">
+                        <img  class="imagebg" onclick="selectimg('party.jpg')" src="party.jpg" alt="">
                     </div>
                 
                     
-                    <div>
-                        <button onclick=" uploadPost()" class="btn btn-primary w-100">Upload</button>
+                    <div class="mt-2">
+                        <button  onclick=" uploadPost()" class="btn btn-primary w-100">Upload</button>
                        
                     </div>
 

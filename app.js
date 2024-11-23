@@ -1,15 +1,37 @@
-var box = document.querySelector('.apna'); 
-var selectedColor = "#ffffff"; 
+var box = document.querySelector('.apna');
+var selectedColor = "#ffffff";
 
 function changebg(color) {
-    selectedColor = color; 
-    box.style.backgroundColor = color; 
+    selectedColor = color;
+    box.style.backgroundColor = color;
 }
+//*********************************************************** */
+var selectImgPath;
+
+
+function selectimg(src) {
+    var imagesBg = document.getElementsByClassName('imagebg');
+    for (var i = 0; i < imagesBg.length; i++) {
+        imagesBg[i].classList.remove('selectimg');
+    }
+    event.target.classList.add('selectimg');
+    selectImgPath = src;
+}
+
+
+
+
+
+
+
+
 function uploadPost() {
     var userName = document.getElementById('UserName')
     var tiTle = document.getElementById('Title')
     var description = document.getElementById('Description')
     var Currentdate = new Date().toUTCString()
+
+    var backgroundStyle = `background-color: ${selectedColor}; background-image: url('${selectImgPath}'); background-size: cover;`;
 
 
     if (userName.value.trim() !== "") {
@@ -24,7 +46,7 @@ function uploadPost() {
                        ${Currentdate}
                     </span>
                 </div>
-                <div style="background-color:${selectedColor}" class="card-body postCardBody">
+                <div  style="${backgroundStyle}" " class="card-body postCardBody">
                     <h5 class="card-title">${tiTle.value}</h5>
                     <p class="card-text">${description.value}</p></div><hr/>
                 <div class="card-body postCardBody d-flex justify-content-between">
@@ -35,6 +57,7 @@ function uploadPost() {
                 userName.value = ''
                 tiTle.value = ''
                 description.value = ''
+                document.querySelector('.selectimg')?.classList.remove('selectimg');
 
 
 
